@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1 class="hh">The Quiz App</h1>
+        <div class="container">
+
+            <ul class="section">
+                <li class="list">Q1.what is the capital city of Telangana?</li>
+                <li class="list"><input type="radio" name="group1">Haryana</li>
+                <li class="list" ><input type="radio" name="group1" value="Hyderabad" id="hyderabad">Hyderabad</li>
+                <li class="list"><input type="radio" name="group1">Mumbai</li>
+                <li class="list"><input type="radio" name="group1">Chandigarh</li>
+            </ul>
+            <hr>
+
+            <ul class="section">
+                <li class="list">Q2.what is the capital city of Punjab?</li>
+                <li class="list"><input type="radio" name="group2" value="Kolkata">kolkatta</li>
+                <li class="list"><input type="radio" name="group2">Hyderabad</li>
+                <li class="list"><input type="radio" name="group2">Mumbai</li>
+                <li class="list" ><input type="radio"id="chandigarh" name="group2">Chandigarh</li>
+            </ul>
+            <hr>
+
+            <ul class="section">
+                <li class="list">Q3.what is the capital city of Maharashtra?</li>
+                <li class="list"><input type="radio" name="group3">kolkatta</li>
+                <li class="list"><input type="radio" name="group3">Hyderabad</li>
+                <li class="list"><input type="radio" id="mumbai" name="group3">Mumbai</li>
+                <li class="list"><input type="radio" name="group3">Chandigarh</li>
+            </ul>
+            <hr>
+            <ul class="section">
+                <li class="list">Q4.what is the capital city of West Bengal?</li>
+
+                <li class="list" ><input type="radio"id="westbengal" name="group4">kolkatta</li>
+                <li class="list"><input type="radio" name="group4">Hyderabad</li>
+                <li class="list"><input type="radio" name="group4">Mumbai</li>
+                <li class="list"><input type="radio" name="group4">Chandigarh</li>
+            </ul>
+            <hr>
+
+            <ul class="section">
+                <li class="list">Q5.what is the capital city of India?</li>
+
+                <li class="list"><input type="radio" id="newdelhi" name="group5">New Delhi</li>
+                <li class="list"><input type="radio" name="group5">Hyderabad</li>
+                <li class="list"><input type="radio" name="group5">Mumbai</li>
+                <li class="list"><input type="radio" name="group5">Chandigarh</li>
+            </ul>
+            <hr>
+        </div>
+        <div class="two">
+            <p class="pp">Score:</p>
+            <h2 class="he" id="the">0 <span>/5</span></h2>
+        </div>
+        <div class="success">
+            <button type="submit" onclick="submit()">submit</button>
+        </div>
+    </div>
+
+
+    
+
+    <script>
+        function submit(){
+        let h=document.querySelector('input[name="group1"]').checked ? 1 : 0;
+        console.log(h);
+        let c=document.querySelector('input[name="group2"]').checked ? 1 : 0;
+        console.log(c);
+        let m=document.querySelector('input[name="group3"]').checked ? 1 : 0;
+        console.log(m);
+        let w=document.querySelector('input[name="group4"]').checked ? 1 : 0;
+        console.log(w);
+        let d=document.querySelector('input[name="group5"]').checked ? 1 : 0;
+        console.log(d);
+        
+        let total=h+c+m+w+d;
+        console.log(total)
+        let t=document.getElementById('the');
+        t.textContent=total+'/5';
+        }
+        
+    </script>
+    
+</body>
+
+</html>
